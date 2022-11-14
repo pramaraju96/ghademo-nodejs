@@ -1,0 +1,21 @@
+name: review_approval
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: test
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        
+      - name: Change Request in ServiceNow
+        run : echo "Change Request approved in ServiceNow"
+
+      - name: Run Deployment
+        run: echo "Deployment Finished...."

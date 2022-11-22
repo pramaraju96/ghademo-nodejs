@@ -3,12 +3,13 @@ name: review_approval
 on:
   workflow_dispatch:
 
+permissions: write-all
 
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    permissions: write-all
+    
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
